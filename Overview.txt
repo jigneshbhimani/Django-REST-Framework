@@ -1,0 +1,11 @@
+Django REST framework(DRF) is a powerful and flexible toolkit for building Web APIs.
+
+It makes serialization much easier.
+
+Django REST framework is based on Django's class-based views, so it's an excellent option if you're familiar with Django.
+
+It adopts implementations such as class-based views, forms, model validator, QuerySet, etc.
+
+Installation:
+
+-> pip install django_rest_framework

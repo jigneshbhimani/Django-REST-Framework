@@ -1,0 +1,41 @@
+The generic views provided by REST framework allow you to quickly build API views that map closely to your database models.
+
+If the generic views don't suit the needs of your API, you can drop down to using the regular APIView class, or reuse the mixins and base classes used by the generic views to compose your own set of reusable generic views.
+
+CreateModelMixin, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin, ListModelMixin
+
+The view classes can be imported from rest_framework.generics.
+
+You can create, update, retrieve and delete the data from the output.(In browser)
+
+1.CreateAPIView: used for create-only endpoints.
+Provides a post method 
+Extends: GenericAPIView, CreateModelMixin
+
+2.RetrieveAPIView: Used for read-only endpoints to represent a single model instance.
+Provides a get method 
+Extends: GenericAPIView, RetrieveModelMixin
+
+3.DestroyAPIView: Used for delete-only endpoints for a single model instance.
+Provides a delete method 
+Extends: GenericAPIView, DestroyModelMixin
+
+4.UpdateAPIView: Used for update-only endpoints for a single model instance.
+Provides put and patch method 
+Extends: GenericAPIView, UpdateModelMixin
+
+5.ListCreateAPIView: Used for read-write endpoints to represent a collection of model instances.
+Provides get and post method
+Extends: GenericAPIView, ListModelMixin, CreateModelMixin
+
+6.RetrieveUpdateAPIView: Used for read or update endpoints to represent a single model instance.
+Provides get, put and patch method
+Extends: GenericAPIView, RetrieveModelMixin, UpdateModelMixin
+
+7.RetrieveDestroyAPIView: Used for read or delete endpoints to represent a single model instance.
+Provides get and delete method
+Extends: GenericAPIView, RetrieveModelMixin, DestroyModelMixin
+
+8.RetrieveUpdateDestroyAPIView: Used for read-write-delete endpoints to represent a single model instance.
+Provides get, put, patch and delete method
+Extends: GenericAPIView, RetrieveModelMixin, UpdateModelMixin, DestroyModelMixin
